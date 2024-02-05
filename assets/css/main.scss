@@ -1,0 +1,33 @@
+@import './base/base';
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 30rem;
+  height: 30rem;
+  background-color: darkcyan;
+  border-radius: 30% 70% 70% 30% / 43% 30% 70% 57%;
+  animation: myAnimation 9s ease-in-out infinite;
+  background: #fff url('../images/kurumsal-img.jpg') no-repeat center center / cover;
+  filter: drop-shadow(1px 3px 7px black);
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateY(0%);
+    border-radius: 30% 70% 70% 30% / 43% 30% 70% 57%;
+  }
+  50% {
+    transform: translateY(-20%);
+    border-radius: 82% 18% 31% 69% / 51% 71% 29% 49%;
+  }
+  100% {
+    transform: translateY(0%);
+    border-radius: 30% 70% 70% 30% / 43% 30% 70% 57%;
+  }
+}
